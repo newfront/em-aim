@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n        \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-Transitional.dtd\">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link href="http://sns-static.aolcdn.com/auth_v11_r6/style/openAuth.css" rel="stylesheet" type="text/css"/>
+	<script language="javascript" type="text/javascript" src="http://sns-static.aolcdn.com/auth_v11_r6/js/auth.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+	<title>Sign In</title>
+	<script type="text/javascript" language="javascript">
+	tbrChks("/auth/badBrowser.jsp?",document.location);
+	</script>
+</head>
+<body>
+	<div id="auth-container" >
+		<noscript>
+			<div id="nojsErr">            
+				<div class="p1">                
+					<img src="http://sns-static.aolcdn.com/auth_v11_r6/images/error.gif" alt=""/>            
+					<!--....-->                                
+				</div>
+				<div class="p2">                
+					<span>Whoops...</span>                
+					This site uses JavaScript. You are either using a browser that does not support JavaScript or has JavaScript disabled. Please enable the JavaScript and refresh the page to have full functionality.
+				</div>        
+			</div>
+		</noscript>
+		<script type="text/javascript">
+		resizeWin(popupWin.width, popupWin.height,"");    
+		</script>
+		<style type="text/css">
+		body {    
+			font:normal 12px Arial;    
+			color:#666666;    
+			margin:-50px 0 0 0;    
+			padding:0;    
+			background:url('http://sns-static.aolcdn.com/auth_v11_r6/images/popupIcons/AOL_Butterfly.jpg') no-repeat fixed left top;   
+		}
+		</style>
+		<div id="multi-auth">
+			<h2 class="hdr">Sign In</h2>
+			<h5 id="providers-hdr">&nbsp;</h5>
+			<div id="oa-cnt">
+				<div id="aol">
+					<form name="LoginActionForm" method="POST" action="https://api.screenname.aol.com/auth/login">            
+						<input type="hidden" name="k" value="">            
+						<input type="hidden" name="succUrl" value="">            
+						<input type="hidden" name="r" value="">           
+						<input type="hidden" name="f" value="json">            
+						<input type="hidden" name="c" value="">           
+						<input type="hidden" name="tokenType" value="">            
+						<input type="hidden" name="authMethod" value="">            
+						<input type="hidden" name="usrd" value="">            
+						<input type="hidden" name="md5" value="">
+						<input type="hidden" name="sig_sha1" value="">            
+						<input type="hidden" name="sig_sha256" value="">            
+						<input type="hidden" name="uiType" value="">            
+						<input type="hidden" name="language" value=""> 
+						<input type="hidden" name="supportedIdType" value="SN"/>
+						<div id="oa-invalidKey">Invalid devId or site not registered.
+						</div>
+						<div id="oa-btns"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="oa-ftr">
+		<a href="http://help.channels.aol.com/topic.adp?topicId=AUTH_AOL_TOS" target="oaHelp" tabindex="9">Terms of Use</a> | <a href="http://help.channels.aol.com/topic.adp?topicId=SG_SignIn" target="oaHelp" tabindex="10">Help</a>    
+		<span>&nbsp;&copy; 2011 AOL Inc. All Rights Reserved</span>
+	</div>
+</body>
+</html>

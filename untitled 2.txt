@@ -1,0 +1,20 @@
+#!/usr/bin/ruby
+require 'hashie'
+#Index	
+#Login	
+#Provider	
+#Unique Id	
+#Unique Id Type	
+#First Name	
+#Last Name	
+#Address 1	
+#Address 2	
+#City	
+#State	
+#Zip	
+#Email 
+#Address	
+#Telephone number	
+#Addy Verified	
+#Ticket Num
+
