@@ -1,0 +1,67 @@
+# AOL CODES
+codes:
+  200: "Success (Ok)"
+  330: "More Authentication Required"
+  400: "Invalid Request"
+  401: "Unauthorized (authentication required)"
+  405: "Method not Allowed"
+  408: "Request Timeout"
+  430: "Source Rate Limit Reached"
+  440: "Invalid Key"
+  441: "Key Usage Limit Reached"
+  442: "Key Invalid IP"
+  443: "Key used from unauthorized site"
+  460: "Missing required parameter"
+  461: "Source Required"
+  462: "Parameter Error"
+  500: "Generic Server Error"
+
+# AOL Status Detail Codes (statusDetailCode)
+status:
+  3011: "Password-LoginId Required/Invalid"
+  3012: "SecurId Required/Invalid"
+  3013: "SecurId Next Token Required"
+  3014: "ASQ Required/Invalid"
+  3015: "Captcha Required/Invalid"
+  3016: "AOLKey Required"
+  3017: "Rights/Consent Required"
+  3018: "TOS/Privacy Policy Accept Required"
+  3019: "Account Not allowed"
+  3020: "Email not confirmed"
+  3021: "Account needs to be updated (send user to AOL)"
+
+# AOL API URL/URIs
+aol_urls:
+  # Main AOL URL
+  base: "api.screenname.aol.com/auth"
+  login:
+    base:
+      protocol: "http"
+      type: "get"
+      uri: "/login"
+      name: "login"
+    client:
+      protocol: "https"
+      type: "post"
+      full_url: "https://api.screenname.aol.com/auth/clientLogin"
+      uri: "/clientLogin"
+      name: "login_client"
+  token:
+    protocol: "http"
+    type: "get"
+    uri: "/getToken"
+    name: "get_token"
+  session:
+    protocol: "http"
+    url: "api.oscar.aol.com/aim"
+    uri: "startSession"
+    full_url: "http://api.oscar.aol.com/aim/startSession"
+
+# API credentials
+credentials:
+  username: "convo-dev@aolmobile.com"
+  password: "C0nv03ng"
+  devkey: "co1CUF33RYdKJBOl"
+  
+request:
+  format: "json"
