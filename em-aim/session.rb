@@ -23,7 +23,7 @@ module OpenAIM
 
     def self.getToken(params = {
       :request_url => "", 
-      :query => {'c'=>'parseToken','devId'=>"", 'f' => "", 's' => "",'succUrl'=>'http://anywhere.convorelay.com'}, 
+      :query => {'c'=>'parseToken','devId'=>"", 'f' => "", 's' => "",'succUrl'=>'http://anywhere.***.com'}, 
       :timeout => 10}, 
       &block)
 
@@ -337,7 +337,7 @@ module OpenAIM
       #          },
       
       # SAMPLE RESPONSE as Mash
-      #<#Hashie::Mash body="{\"response\": {\"statusCode\": 200, \"data\": {\"luid\": \"81D74799-89ED-8B1A-98EA-40D993C40B88\", \"loginId\": \"convo-dev@aolmobile.com\", \"hostTime\": 1310177208, \"sessionSecret\": \"VdGPKNaerJFnhbWV\", \"token\": {\"expiresIn\": 1209600, \"a\": \"%2FwQAAAAAAADYoauPSHX5GcFzxrZ%2FFcG7s5%2BFcR6fSDMuPZqMH2kg21oH6B4xdSv8Utm047uFg4Ut4%2BS68unebiNOzXjPoN71XL7iX9UOQfjY5RLhL5pAhu9gt0d6TgsE09sAeQ1djWAeWlYjTqr0KNtlN2IT5qz3nvAjSk0yq2zTaM%2BcVldjTxUEkTQ2drVv8QicnQ%3D%3D\"}}, \"statusText\": \"OK\"}}\n" header=<#Hashie::Mash CACHE_CONTROL="no-cache, must-revalidate" CONNECTION="Keep-Alive" CONTENT_LANGUAGE="en-US" CONTENT_TYPE="application/json;charset=UTF-8" DATE="Sat, 09 Jul 2011 02:06:48 GMT" EXPIRES="Thu, 01 Jan 1970 00:00:00 GMT" KEEP_ALIVE="timeout=15, max=500" P3P="CP=\"PHY ONL PRE STA CURi OUR IND\"" PRAGMA="No-cache" SET_COOKIE="JSESSIONID=CA763419D20DCBC2EB3635C4942ED001; Path=/auth; Secure" TRANSFER_ENCODING="chunked"> header_status=200>
+      #<#Hashie::Mash body="{\"response\": {\"statusCode\": 200, \"data\": {\"luid\": \"81D74799-89ED-8B1A-98EA-40D993C40B88\", \"loginId\": \"***-dev@aolmobile.com\", \"hostTime\": 1310177208, \"sessionSecret\": \"***\", \"token\": {\"expiresIn\": 1209600, \"a\": \"%2FwQAAAAAAADYoauPSHX5GcFzxrZ%2FFcG7s5%2BFcR6fSDMuPZqMH2kg21oH6B4xdSv8Utm047uFg4Ut4%2BS68unebiNOzXjPoN71XL7iX9UOQfjY5RLhL5pAhu9gt0d6TgsE09sAeQ1djWAeWlYjTqr0KNtlN2IT5qz3nvAjSk0yq2zTaM%2BcVldjTxUEkTQ2drVv8QicnQ%3D%3D\"}}, \"statusText\": \"OK\"}}\n" header=<#Hashie::Mash CACHE_CONTROL="no-cache, must-revalidate" CONNECTION="Keep-Alive" CONTENT_LANGUAGE="en-US" CONTENT_TYPE="application/json;charset=UTF-8" DATE="Sat, 09 Jul 2011 02:06:48 GMT" EXPIRES="Thu, 01 Jan 1970 00:00:00 GMT" KEEP_ALIVE="timeout=15, max=500" P3P="CP=\"PHY ONL PRE STA CURi OUR IND\"" PRAGMA="No-cache" SET_COOKIE="JSESSIONID=CA763419D20DCBC2EB3635C4942ED001; Path=/auth; Secure" TRANSFER_ENCODING="chunked"> header_status=200>
       
       
       def self.login(params={},&block)
@@ -347,7 +347,7 @@ module OpenAIM
         #TODO OpenAIM::Request.new(params,&block)
         
         # :head => {"X-Forwarded-For" => "10.0.0.3"}, 
-        # :ssl => { :private_key_file => '/Users/scotthai/.ssh/ssl/server.key.insecure',:cert_chain_file => '/Users/scotthai/.ssh/ssl/server.key.insecure', :verify_peer => false}
+        # :ssl => { :private_key_file => '/Users/scotthai/.ssh/ssl/server.key.insecure',:cert_chain_file => '/Users/ME/.ssh/ssl/server.key.insecure', :verify_peer => false}
         http = EventMachine::HttpRequest.new(params[:request_url]).post :query => params[:query], :timeout => params[:timeout], :head => {'x-header' => 'X-Forwarded-For: 10.0.0.3'}
 
         http.callback {
